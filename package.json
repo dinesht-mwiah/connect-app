@@ -1,0 +1,21 @@
+{
+  "name": "ct-connect-published-products",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@commercetools/platform-sdk": "^4.0.0",
+    "@commercetools/sdk-client-v2": "^3.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

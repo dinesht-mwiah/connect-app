@@ -1,0 +1,11 @@
+application:
+  name: published-products-app
+  description: List published products from commercetools
+  entryPoint: /health
+  endpoints:
+    - name: api
+      path: /
+      method: all
+      secured: true
+      scopes:
+        - view_products
