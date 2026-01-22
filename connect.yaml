@@ -1,11 +1,28 @@
-application:
-  name: published-products-app
-  description: List published products from commercetools
-  entryPoint: /health
-  endpoints:
-    - name: api
-      path: /
-      method: all
-      secured: true
-      scopes:
-        - view_products
+deployAs:
+  - name: hd-commerce-service
+    applicationType: service
+    endpoint: /hd-service
+    configuration:
+      standardConfiguration:
+        - key: CT_API_URL
+          description: commercetools api url
+        - key: CT_PROJECT_KEY
+          description: commercetools project key
+        - key: CT_AUTH_URL
+          description: commercetools auth url
+      securedConfiguration:
+        - key: CT_CLIENT_ID
+          description: commercetools client ID
+        - key: CT_CLIENT_SECRET
+          description: commercetools client secret
+  - application:
+    name: published-products-app
+    description: List published products from commercetools
+    entryPoint: /health
+    endpoints:
+      - name: api
+        path: /
+        method: all
+        secured: true
+        scopes:
+          - view_products
