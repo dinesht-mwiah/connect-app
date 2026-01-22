@@ -1,15 +1,7 @@
 deployAs:
   - name: published-products-app
-    description: List published products from commercetools
     applicationType: service
-    entryPoint: /health
-    endpoints:
-      - name: api
-        path: /
-        method: all
-        secured: true
-        scopes:
-          - view_products
+    endpoint: /
     configuration:
       standardConfiguration:
         - key: CT_API_URL
